@@ -28,9 +28,17 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.env.test
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+
+#serverless
+.serverless
+.serverless_nextjs
+
+#.swc
+.swc

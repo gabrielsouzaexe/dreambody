@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  postgres: 
+    container_name: postgres_db
+    image: postgres
+    restart: always
+    ports: 
+      - '5432:5432'
+    environment: 
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: feijuca
+      POSTGRES_DB: db_dreambody
+
+  app:
+    container_name: dreambody_app
+    build: .
+    ports: 
+      - '3000:3000'
